@@ -22,7 +22,8 @@ scaled_test_output = output_scaler.transform(test_output)
 # Always set the learning rate to 0.01 as the model finds it hard to learn.
 
 model = keras.Sequential([
-    keras.layers.Dense(units=1, input_shape=[1], activation='relu'),
+    keras.layers.Dense(units=16, input_shape=[1], activation='relu'),
+    keras.layers.Dense(units=16, activation='relu')
     keras.layers.Dense(units=1)
 ])
 learning_rate = 0.001
