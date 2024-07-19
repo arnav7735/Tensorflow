@@ -37,10 +37,20 @@ model.compile(optimizer=optimizer, loss='mean_squared_error')
 model.fit(scaled_train_input, scaled_train_output, epochs=500)
 
 model.evaluate(scaled_test_input, scaled_test_output)
-
+'''
 new_input = np.array([10.0]).reshape(-1, 1)
 scaled_new_input = input_scaler.transform(new_input)
-predictor = model.predict(scaled_new_input)
+'''
+predictor = model.predict(scaled_test_input)
 
-denormalized_prediction = output_scaler.inverse_transform(predictor)
+system_prediction = output_scaler.inverse_transform(predictor)
 print("Denormalized Prediction:", denormalized_prediction)
+
+plt.figure(figsize=(10, 6))
+plt.plot(test_input, test_output, label='Real Test Outputs', color='red')
+plt.plot(test_input, system_prediction, label='Predicted Test Outputs', color='green')
+plt.xlabel('Inputs')
+plt.ylabel('Outputs')
+plt.grid(True)
+plt.legend()
+plt.show()
