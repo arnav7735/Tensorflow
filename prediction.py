@@ -37,7 +37,9 @@ model.compile(optimizer=optimizer, loss='mean_squared_error')
 
 model.fit(scaled_train_input, scaled_train_output, epochs=500)
 
-model.evaluate(scaled_test_input, scaled_test_output)
+loss = model.evaluate(scaled_test_input, scaled_test_output)
+print("Loss:",loss)
+
 '''
 new_input = np.array([10.0]).reshape(-1, 1)
 scaled_new_input = input_scaler.transform(new_input)
