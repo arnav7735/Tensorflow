@@ -4,6 +4,8 @@ import tensorflow as tf
 from tensorflow import keras
 from sklearn.preprocessing import MinMaxScaler
 
+# The MinMaxScaler() takes 2D arrays as inputs , hence we need to reshape
+
 train_input = np.array([2.0, 4.0, 6.0, 8.0, 12.0, 14.0, 16.0, 18.0, 20.0]).reshape(-1, 1)
 train_output = np.array([4.0, 8.0, 12.0, 16.0, 24.0, 28.0, 32.0, 36.0, 40.0]).reshape(-1, 1)
 
