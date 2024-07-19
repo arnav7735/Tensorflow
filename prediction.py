@@ -36,6 +36,8 @@ model = keras.Sequential([
     keras.layers.Dense(units=8, activation='relu'),
     keras.layers.Dense(units=1)
 ])
+
+#An optimizer is used to adjust the weights on a node to minimize loss function
 learning_rate = 0.001
 optimizer = keras.optimizers.Adam(learning_rate=learning_rate)
 model.compile(optimizer=optimizer, loss='mean_squared_error')
