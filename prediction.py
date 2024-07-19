@@ -26,6 +26,11 @@ scaled_test_output = output_scaler.transform(test_output)
 # Always set the learning rate to 0.01 as the model finds it hard to learn.
 
 model = keras.Sequential([
+
+    #An activation function is essentially used to introduce a non-linearity in plotting the graph , so that the model can asses the values and start learning
+
+    #Sigmoid - Binary Class Classification
+    #Softmax -Multi Class Classification
     keras.layers.Dense(units=32, input_shape=[1], activation='relu'),
     keras.layers.Dense(units=16, activation='relu'),
     keras.layers.Dense(units=8, activation='relu'),
