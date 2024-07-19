@@ -12,6 +12,8 @@ train_output = np.array([4.0, 8.0, 12.0, 16.0, 24.0, 28.0, 32.0, 36.0, 40.0]).re
 test_input = np.array([9.0, 17.0, 25.0, 70.0]).reshape(-1, 1)
 test_output = np.array([18.0, 34.0, 50.0, 140.0]).reshape(-1, 1)
 
+#Make sure you fit_transform your training set and transform your test set
+
 input_scaler = MinMaxScaler()
 output_scaler = MinMaxScaler()
 
