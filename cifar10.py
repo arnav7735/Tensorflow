@@ -18,6 +18,9 @@ y_test = y_test.reshape(y_test.shape[0], 1)
 model = tf.keras.models.Sequential([
 
     layers.Conv2D(32, kernel_size=(3, 3), activation='relu', padding='same', input_shape=(32, 32, 3)),
+    layers.MaxPooling2D(pool_size=(2, 2)),
+    layers.Conv2D(64, kernel_size=(3, 3), activation='relu', padding='same'),
+    layers.MaxPooling2D(pool_size=(2, 2)),
     layers.Flatten(),
     layers.Dense(64, activation='relu'),
     layers.Dense(32, activation='relu'),
