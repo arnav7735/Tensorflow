@@ -44,6 +44,7 @@ print(y_train.shape)
 print(x_test.shape)
 print(y_test.shape)
 """
+# Remember a Dense layer always takes 1D flattened array as input. So if we are passing the output of a layer(2D array sometimes) it is necessary to Flatten the output.
 
 model = keras.Sequential([
 
