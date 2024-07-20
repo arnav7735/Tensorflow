@@ -12,6 +12,8 @@ y_train = pd.read_csv(r"C:\Users\Arnav\Desktop\TensorFlow\labels.csv")
 x_test = pd.read_csv(r"C:\Users\Arnav\Desktop\TensorFlow\input_test.csv")
 y_test = pd.read_csv(r"C:\Users\Arnav\Desktop\TensorFlow\labels_test.csv")
 
+#Label your classes at type int
+
 y_train = y_train.astype(int)
 y_test = y_test.astype(int)
 
